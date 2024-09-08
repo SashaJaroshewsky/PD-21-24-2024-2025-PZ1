@@ -1,4 +1,4 @@
-﻿using Pz1.Task;
+﻿using Pz1.TaskSystem;
 
 namespace Pz1
 {
@@ -8,8 +8,6 @@ namespace Pz1
         {
             TaskController controller = new TaskController();
             controller.Start();
-
-
         }
 
     }

@@ -1,10 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Pz1.Task
+﻿
+namespace Pz1.TaskSystem
 {
     internal class TaskController
     {
@@ -25,7 +20,7 @@ namespace Pz1.Task
                 Console.WriteLine("Press Enter to select another task");
                 Console.ReadLine();
                 taskType = _inputController.Input();
-                
+
             }
         }
     }

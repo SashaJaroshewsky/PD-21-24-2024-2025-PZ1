@@ -1,9 +1,7 @@
-﻿namespace Pz1.Task
+﻿namespace Pz1.TaskSystem.Tasks
 {
-
     internal class Task1 : ITaskeable
     {
-
         private int _min;
         private int _max;
 
@@ -11,7 +9,7 @@
         public Task1()
         {
             _min = 1;
-            _max = 10+3;
+            _max = 10 + 3;
 
             _numbers = new int[3];
             for (int i = 0; i < _numbers.Length; i++)
@@ -27,16 +25,16 @@
             _min = min;
             _max = max;
         }
+        public void StartTask()
+        {
+            StartTask(_numbers);
+        }
+
         public void StartTask(int[] arr)
         {
             ShowArray(arr);
 
             PrintNumbersWithinRange(arr, _min, _max);
-        }
-
-        public void StartTask()
-        {
-            StartTask(_numbers);
         }
 
         private void ShowArray(int[] array)

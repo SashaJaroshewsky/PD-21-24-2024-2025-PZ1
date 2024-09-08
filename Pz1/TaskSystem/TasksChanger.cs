@@ -1,10 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using Pz1.TaskSystem.Tasks;
 
-namespace Pz1.Task
+namespace Pz1.TaskSystem
 {
     internal class TasksChanger
     {
@@ -34,8 +30,5 @@ namespace Pz1.Task
                     break;
             }
         }
-
-
-
     }
 }

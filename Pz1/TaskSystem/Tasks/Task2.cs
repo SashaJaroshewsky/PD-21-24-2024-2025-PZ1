@@ -1,12 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Pz1.Task
+﻿
+namespace Pz1.TaskSystem.Tasks
 {
-    internal class Task2: ITaskeable
+    internal class Task2 : ITaskeable
     {
         public void StartTask()
         {
