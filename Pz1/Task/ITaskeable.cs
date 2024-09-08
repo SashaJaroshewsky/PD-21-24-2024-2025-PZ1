@@ -4,10 +4,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Pz1
+namespace Pz1.Task
 {
-    internal class Task22: IBaseTask
+    public interface ITaskeable
     {
-        public override void StartTask() { }
+        void StartTask();
+
+        void StopTask();
     }
 }

@@ -6,21 +6,9 @@ namespace Pz1
     {
         static void Main(string[] args)
         {
-            //Task1 task1 = new Task1();
-            //task1.StartTask();
+            TaskController controller = new TaskController();
+            controller.Start();
 
-            IBaseTask task1 = new Task1();
-            IBaseTask task2 = new Task2();
-
-            task1.StartTask();
-            task2.StartTask();
-
-            IBaseTask[] baseTasks = { task1, task2 };
-
-            foreach (var task in baseTasks) 
-            { 
-                task.StartTask();
-            }
 
         }
 

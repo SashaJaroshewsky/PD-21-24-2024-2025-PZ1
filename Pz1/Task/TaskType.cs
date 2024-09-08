@@ -4,12 +4,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Pz1
+namespace Pz1.Task
 {
-    internal abstract class BaseTask
+    internal enum TaskType
     {
-        public abstract void StartTask();
-
- 
+        None = 0,
+        Task1 = 1,
+        Task2 = 2,
+        Exit = 3,
     }
 }
