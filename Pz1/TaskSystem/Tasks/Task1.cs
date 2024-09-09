@@ -6,35 +6,30 @@
         private int _max;
 
         private int[] _numbers;
+
+        public int LenghtNumbers => _numbers.Length;
         public Task1()
         {
             _min = 1;
             _max = 10 + 3;
 
             _numbers = new int[3];
+        }
+        
+        public void StartTask()
+        {
             for (int i = 0; i < _numbers.Length; i++)
             {
                 _numbers[i] = new Random().Next(-100, 100);
             }
+            StartTask(_numbers, _min, _max);
         }
 
-        public Task1(int[] numbers, int min, int max)
-        {
-            _numbers = numbers;
-
-            _min = min;
-            _max = max;
-        }
-        public void StartTask()
-        {
-            StartTask(_numbers);
-        }
-
-        public void StartTask(int[] arr)
+        public void StartTask(int[] arr, int min, int max)
         {
             ShowArray(arr);
 
-            PrintNumbersWithinRange(arr, _min, _max);
+            PrintNumbersWithinRange(arr, min, max);
         }
 
         private void ShowArray(int[] array)
@@ -44,20 +39,20 @@
 
         private void PrintNumbersWithinRange(int[] numbers, int min, int max)
         {
-            Console.Write($"Numbers that are in range of [{_min};{_max}]: ");
+            Console.Write($"Numbers that are in range of [{min};{max}]: ");
 
             foreach (int number in numbers)
             {
                 if (IsWithinRange(number, min, max))
                 {
-                    Console.WriteLine(number);
+                    Console.Write(number + " ");
                 }
             }
 
             Console.WriteLine();
         }
 
-        private bool IsWithinRange(int number, int min, int max)
+        public bool IsWithinRange(int number, int min, int max)
         {
             return number >= min && number <= max;
         }
@@ -66,5 +61,7 @@
         {
             Console.Clear();
         }
+
+        
     }
 }

@@ -1,9 +1,8 @@
-﻿
-namespace Pz1.TaskSystem
+﻿namespace Pz1.InputSystem
 {
     internal class InputController
     {
-        public TaskType Input()
+        public InputType Input()
         {
             int inputNumber;
             do
@@ -20,13 +19,13 @@ namespace Pz1.TaskSystem
             switch (inputNumber)
             {
                 case 0:
-                    return TaskType.Exit;
+                    return InputType.Exit;
                 case 1:
-                    return TaskType.Task1;
+                    return InputType.Task1;
                 case 2:
-                    return TaskType.Task2;
+                    return InputType.Task2;
                 default:
-                    return TaskType.None;
+                    return InputType.None;
             }
         }
 

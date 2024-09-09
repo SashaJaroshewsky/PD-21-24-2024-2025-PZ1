@@ -1,26 +1,28 @@
 ﻿
+using Pz1.InputSystem;
+
 namespace Pz1.TaskSystem
 {
-    internal class TaskController
+    internal class TasksController
     {
         private InputController _inputController;
         private TasksChanger _tasksChanger;
 
-        public TaskController()
+        public TasksController()
         {
             _inputController = new InputController();
             _tasksChanger = new TasksChanger();
         }
         public void Start()
         {
-            TaskType taskType = _inputController.Input();
-            while (taskType != TaskType.Exit)
+            InputType taskType = _inputController.Input();
+            while (taskType != InputType.Exit)
             {
-                _tasksChanger.ChangeTask(taskType);
+                _tasksChanger.ChangeAndStartTask(taskType);
+                Console.WriteLine();
                 Console.WriteLine("Press Enter to select another task");
                 Console.ReadLine();
                 taskType = _inputController.Input();
-
             }
         }
     }

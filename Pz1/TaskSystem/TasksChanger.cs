@@ -1,4 +1,5 @@
-﻿using Pz1.TaskSystem.Tasks;
+﻿using Pz1.InputSystem;
+using Pz1.TaskSystem.Tasks;
 
 namespace Pz1.TaskSystem
 {
@@ -11,16 +12,15 @@ namespace Pz1.TaskSystem
             _currentTaskeable = new Task1();
         }
 
-        public void ChangeTask(TaskType taskType)
+        public void ChangeAndStartTask(InputType taskType)
         {
             switch (taskType)
             {
-                case TaskType.Task1:
+                case InputType.Task1:
                     _currentTaskeable?.StopTask();
-                    _currentTaskeable = new Task1();
-                    _currentTaskeable.StartTask();
+                    _currentTaskeable = new Task1Constructor().ChooseAndStartStrategy();
                     break;
-                case TaskType.Task2:
+                case InputType.Task2:
                     _currentTaskeable?.StopTask();
                     _currentTaskeable = new Task2();
                     _currentTaskeable.StartTask();
@@ -30,5 +30,7 @@ namespace Pz1.TaskSystem
                     break;
             }
         }
+
+        
     }
 }

@@ -6,7 +6,7 @@ namespace Pz1
     {
         static void Main(string[] args)
         {
-            TaskController controller = new TaskController();
+            TasksController controller = new TasksController();
             controller.Start();
         }
 

@@ -1,7 +1,6 @@
-﻿
-namespace Pz1.TaskSystem
+﻿namespace Pz1.InputSystem
 {
-    internal enum TaskType
+    internal enum InputType
     {
         None = 0,
         Task1 = 1,
